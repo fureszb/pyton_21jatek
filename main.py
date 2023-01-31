@@ -1,0 +1,3 @@
+#megoldas
+def eredmeny():
+    #tesztesetek
