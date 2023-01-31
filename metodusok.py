@@ -11,9 +11,9 @@ def eredmeny(g_lapok: [int], j_lapok: [int]):
     jpont: int = osszeg(j_lapok)
     if gpont > 21:
         szoveg = "A gép vesztett!"
-        return szoveg
     elif jpont > 21:
         szoveg = "A játékos vesztett!"
-        return szoveg
+
+    return szoveg
     #tesztesetek
 
