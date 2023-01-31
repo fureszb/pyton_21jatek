@@ -1,3 +1,3 @@
-#megoldas
+#megoldás
 def eredmeny():
     #tesztesetek
