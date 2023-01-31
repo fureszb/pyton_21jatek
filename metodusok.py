@@ -13,7 +13,19 @@ def eredmeny(g_lapok: [int], j_lapok: [int]):
         szoveg = "A gép vesztett!"
     elif jpont > 21:
         szoveg = "A játékos vesztett!"
-
     return szoveg
-    #tesztesetek
+
+def teszt_esetek():
+    jatekos_vesztett_teszt()
+    
+def jatekos_vesztett_teszt():
+    jlapok = [10,9,3]
+    glapok = [10,9]
+    vart_eredmeny = "A játékos vesztett!"
+    kapott_eredmeny = eredmeny(jlapok, glapok)
+    if vart_eredmeny == kapott_eredmeny:
+        print("teszt sikeres")
+    else: 
+        print("Teszt megbukott")
+    
 
