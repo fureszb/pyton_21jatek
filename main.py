@@ -5,5 +5,5 @@ def eredmeny():
     if gpont > 21:
         print("A gép vesztett!")
     elif jpont > 21:
-        print("A jatekos vesztett!")
+        print("A játékos vesztett!")
     #tesztesetek
