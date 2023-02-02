@@ -26,9 +26,9 @@ def jatekos_vesztett_21nel_nagyobb_teszt():
     vart_eredmeny = "A játékos vesztett!"
     kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("A játékos teszt sikeres")
+        print("A játékos '21-nél több' teszt sikeres")
     else: 
-        print("A játékos teszt megbukott")
+        print("A játékos '21-nél több' teszt megbukott")
     
 def jatekos_vesztett_21nel_kevesebb_teszt():
     jlapok = [10, 9, 1]
@@ -36,9 +36,9 @@ def jatekos_vesztett_21nel_kevesebb_teszt():
     vart_eredmeny = "A játékos vesztett!"
     kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("A játékos teszt sikeres")
+        print("A játékos '21-nél kevesebb' teszt sikeres")
     else:
-        print("A játékos teszt megbukott")
+        print("A játékos '21-nél kevesebb' teszt megbukott")
 
 def jatekos_vesztett_tobb_huzas_teszt():
     jlapok = [10, 9, 1, 1]
@@ -46,6 +46,6 @@ def jatekos_vesztett_tobb_huzas_teszt():
     vart_eredmeny = "A játékos vesztett!"
     kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("A játékos teszt sikeres")
+        print("A játékos 'több húzás' teszt sikeres")
     else:
-        print("A játékos teszt megbukott")
+        print("A játékos 'több húzás' teszt megbukott")
