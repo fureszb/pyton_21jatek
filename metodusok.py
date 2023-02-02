@@ -16,9 +16,11 @@ def eredmeny(g_lapok: [int], j_lapok: [int]):
     return szoveg
 
 def teszt_esetek():
-    jatekos_vesztett_teszt()
+    jatekos_vesztett_21nel_nagyobb_teszt()
+    jatekos_vesztett_21nel_kevesebb_teszt()
+    jatekos_vesztett_tobb_huzas_teszt()
     
-def jatekos_vesztett_teszt():
+def jatekos_vesztett_21nel_nagyobb_teszt():
     jlapok = [10,9,3]
     glapok = [10,9]
     vart_eredmeny = "A játékos vesztett!"
@@ -28,4 +30,22 @@ def jatekos_vesztett_teszt():
     else: 
         print("A játékos teszt megbukott")
     
+def jatekos_vesztett_21nel_kevesebb_teszt():
+    jlapok = [10, 9, 1]
+    glapok = [10, 9, 2]
+    vart_eredmeny = "A játékos vesztett!"
+    kapott_eredmeny = eredmeny(jlapok, glapok)
+    if vart_eredmeny == kapott_eredmeny:
+        print("A játékos teszt sikeres")
+    else:
+        print("A játékos teszt megbukott")
 
+def jatekos_vesztett_tobb_huzas_teszt():
+    jlapok = [10, 9, 1, 1]
+    glapok = [10, 9, 2]
+    vart_eredmeny = "A játékos vesztett!"
+    kapott_eredmeny = eredmeny(jlapok, glapok)
+    if vart_eredmeny == kapott_eredmeny:
+        print("A játékos teszt sikeres")
+    else:
+        print("A játékos teszt megbukott")
