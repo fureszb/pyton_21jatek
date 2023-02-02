@@ -23,13 +23,13 @@ def eredmeny(g_lapok: [int], j_lapok: [int]):
                 szoveg = "Gép nyert"
             else:
                 szoveg = "Döntetlen, osztoztok a nyereségen"
-    else:
-        if gpont > 21:
-            szoveg = "A gép vesztett!"
-        if jpont > 21:
-            szoveg = "A játékos vesztett!"
-        if jpont > 21 and gpont >21:
-            szoveg= "Döntetlen, a Ház nyert"
+
+    if gpont > 21:
+        szoveg = "A gép vesztett!"
+    if jpont > 21:
+        szoveg = "A játékos vesztett!"
+    if jpont > 21 and gpont >21:
+        szoveg= "Döntetlen, a Ház nyert"
     return szoveg
 
 def teszt_esetek():
