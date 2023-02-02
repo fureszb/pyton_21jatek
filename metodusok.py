@@ -24,8 +24,8 @@ def jatekos_vesztett_teszt():
     vart_eredmeny = "A játékos vesztett!"
     kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("teszt sikeres")
+        print("A játékos teszt sikeres")
     else: 
-        print("Teszt megbukott")
+        print("A játékos teszt megbukott")
     
 
