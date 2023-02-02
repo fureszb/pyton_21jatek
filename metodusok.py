@@ -26,9 +26,9 @@ def eredmeny(g_lapok: [int], j_lapok: [int]):
     else:
         if gpont > 21:
             szoveg = "A gép vesztett!"
-        elif jpont > 21:
+        if jpont > 21:
             szoveg = "A játékos vesztett!"
-        elif jpont > 21 and gpont >21:
+        if jpont > 21 and gpont >21:
             szoveg= "Döntetlen, a Ház nyert"
     return szoveg
 
