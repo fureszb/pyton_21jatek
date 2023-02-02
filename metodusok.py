@@ -9,10 +9,27 @@ def osszeg(lapok)-> int:
 def eredmeny(g_lapok: [int], j_lapok: [int]):
     gpont: int = osszeg(g_lapok)
     jpont: int = osszeg(j_lapok)
-    if gpont > 21:
-        szoveg = "A gép vesztett!"
-    elif jpont > 21:
-        szoveg = "A játékos vesztett!"
+    jdb= len(j_lapok)
+    gdb = len(g_lapok)
+    if(jpont <= 21 and gpont <= 21):
+        if jpont>gpont:
+            szoveg = "Játékos nyert"
+        elif gpont>jpont:
+            szoveg = "gép nyert"
+        elif gpont == jpont:
+            if jdb < gdb:
+                szoveg = "Játékos nyert"
+            elif jdb > gdb:
+                szoveg = "Gép nyert"
+            else:
+                szoveg = "Döntetlen, osztoztok a nyereségen"
+    else:
+        if gpont > 21:
+            szoveg = "A gép vesztett!"
+        elif jpont > 21:
+            szoveg = "A játékos vesztett!"
+        elif jpont > 21 and gpont >21:
+            szoveg= "Döntetlen, a Ház nyert"
     return szoveg
 
 def teszt_esetek():
@@ -23,6 +40,8 @@ def teszt_esetek():
     gep_vesztett_21nel_nagyobb_teszt()
     gep_vesztett_21nel_kevesebb_teszt()
     gep_vesztett_tobb_huzas_teszt()
+
+    dontetlen_teszt()
 
 def jatekos_vesztett_21nel_nagyobb_teszt():
     jlapok = [10,9,3]
@@ -84,6 +103,16 @@ def gep_vesztett_tobb_huzas_teszt():
         print("A gép 'több húzás' teszt sikeres")
     else:
         print("A gép 'több húzás' teszt megbukott")
+
+def dontetlen_teszt():
+    jatekos_lapok = [5,8]
+    gep_lapok = [8,5]
+    vart_eredmeny = "Döntetlen, osztoztok a nyereségen"
+    kapott_eredmeny = eredmeny(jatekos_lapok,gep_lapok)
+    if kapott_eredmeny == vart_eredmeny:
+        print("A 'döntetlen' teszt sikeres")
+    else:
+        print("A 'döntetlen' teszt megbukott")
 
 
 
